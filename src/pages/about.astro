@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SkillBar from '../components/SkillBar.astro';
+---
+<BaseLayout title="Sobre mí | Sergio Socas" description="Trayectoria de Sergio Socas: 3 años como desarrollador frontend autodidacta.">
+  <section class="container about-hero">
+    <div class="about-grid">
+      <div class="about-media">
+        <img src="/public/profile-pic.png" alt="Foto de Sergio" class="about-photo" />
+      </div>
+      <div class="about-body">
+        <h2>Mi recorrido</h2>
+        <p>Hace tres años comencé un viaje autodidacta hacia el desarrollo web. Empecé resolviendo problemas pequeños, construyendo páginas estáticas y poco a poco aprendí a estructurar proyectos, a escribir CSS robusto y a pensar en rendimiento desde el primer día. Cada proyecto fue un laboratorio: medí la experiencia del usuario, optimicé tiempos de carga y aprendí a priorizar accesibilidad y semántica.</p>
+        <p>Mi enfoque actual: entregar interfaces limpias, rápidas y mantenibles. Trabajo con componentes, patrones CSS modernos y herramientas de build para reducir fricción. Me apasiona convertir casos complejos en interacciones sencillas y agradables.</p>
+        <div class="skills">
+          <SkillBar name="HTML" level={95} />
+          <SkillBar name="CSS" level={92} />
+          <SkillBar name="JavaScript" level={80} />
+          <SkillBar name="Astro" level={75} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,39 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SeoHead from '../components/SeoHead.astro';
+const { title = 'Sergio Socas — Frontend Developer', description = 'Portafolio personal de Sergio Socas. Frontend developer autodidacta.' } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <SeoHead title={title} description={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+  </head>
+  <body>
+    <Header />
+    <main id="content" class="page-content">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      // View transitions helper for browsers that support it
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (!href || !href.startsWith('/') || a.hasAttribute('data-no-vt')) return;
+        if (document.startViewTransition) {
+          e.preventDefault();
+          const url = new URL(href, location.origin);
+          document.startViewTransition(() => { location.href = url.href; });
+        }
+      });
+    </script>
+  </body>
+</html>

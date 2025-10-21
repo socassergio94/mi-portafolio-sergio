@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+<BaseLayout title="Proyectos | Sergio Socas" description="Proyectos front-end: UI, performance y SEO.">
+  <section class="container projects-grid">
+    <h2>Proyectos destacados</h2>
+    <div class="grid">
+      <ProjectCard title="Dashboard Analítico" description="Visualizaciones limpias y en tiempo real." img="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop" tags={["Dashboard","Data"]} url="#" />
+      <ProjectCard title="Tienda Online (UI)" description="Interfaz de compra centrada en la conversión y accesibilidad." img="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000&auto=format&fit=crop" tags={["E-commerce","UI"]} url="#" />
+      <ProjectCard title="Blog Técnico" description="Estructura optimizada para SEO y rendimiento." img="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" tags={["Blog","SEO"]} url="#" />
+    </div>
+  </section>
+</BaseLayout>

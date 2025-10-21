@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+<BaseLayout title="Inicio | Sergio Socas" description="Portafolio personal de Sergio Socas. Frontend developer autodidacta.">
+  <section class="hero container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Hola, soy <strong>Sergio Socas</strong></h1>
+        <p class="lead">Frontend developer enfocado en rendimiento, accesibilidad y experiencia de usuario. +3 años de recorrido autodidacta construyendo interfaces con cuidado por el detalle.</p>
+        <div class="cta-row">
+          <a href="/projects" class="btn" data-astro-prefetch>Ver proyectos</a>
+          <a href="/contact" class="btn btn-outline" data-astro-prefetch>Contactar</a>
+        </div>
+        <ul class="highlights">
+          <li>Interfaces rápidas y accesibles (Core Web Vitals)</li>
+          <li>Experiencia en arquitectura CSS modular y componentes reutilizables</li>
+          <li>Optimización y SEO on-page</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <img src="/public/profile-pic.png" alt="Sergio Socas" class="profile-photo" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container intro-cards">
+    <ProjectCard title="Interfaz UI" description="Diseño y componentes reutilizables pensados para la usabilidad." img="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" tags={["UI","Design"]} url="#" />
+    <ProjectCard title="SEO & Performance" description="Estrategias aplicadas para mejorar índices y visibilidad." img="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop" tags={["SEO","Performance"]} url="#" />
+    <ProjectCard title="Microinteracciones" description="Animaciones y transiciones que mejoran la experiencia sin sacrificar rendimiento." img="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=800&auto=format&fit=crop" tags={["UX","Motion"]} url="#" />
+  </section>
+</BaseLayout>
