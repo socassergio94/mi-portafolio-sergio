@@ -1,1 +1,0 @@
-import"./hoisted.C-Q_ZoUg.js";const e=document.getElementById("contactForm"),t=document.getElementById("formStatus"),n=document.getElementById("clearBtn");e.addEventListener("submit",()=>{t.textContent="Enviando...",setTimeout(()=>{t.textContent="¡Mensaje enviado! Te responderé en menos de 48 horas.",e.reset()},900)});n.addEventListener("click",()=>e.reset());

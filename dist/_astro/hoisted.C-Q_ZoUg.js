@@ -1,1 +1,0 @@
-document.addEventListener("click",n=>{const t=n.target.closest("a");if(!t)return;const e=t.getAttribute("href");if(!(!e||!e.startsWith("/")||t.hasAttribute("data-no-vt"))&&document.startViewTransition){n.preventDefault();const r=new URL(e,location.origin);document.startViewTransition(()=>{location.href=r.href})}});
