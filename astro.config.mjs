@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://socassergio94.github.io/mi-portafolio-sergio/",
-  base: "/mi-portafolio-sergio/", // 👈 esto es CLAVE
+  base: "/mi-portafolio-sergio/", 
   outDir: "./dist",
   viewTransitions: true,
 });
